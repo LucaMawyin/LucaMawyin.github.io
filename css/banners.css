@@ -1,0 +1,97 @@
+.title-banner{
+
+    position: relative;
+    align-items: center;
+    display: flex;
+
+    width:100%;
+    box-sizing: border-box;
+    justify-content: center;
+
+    background-color: maroon;
+    font-size: xx-large;
+}
+
+.title-banner a{
+    text-decoration: none;
+    color: white;
+}
+
+.title-banner h1{
+    transition: ease 0.3s;
+}
+
+.title-banner h1:hover{
+    color: black !important;
+    transition: ease 0.3s;
+}
+
+.title-banner h1:active{
+    transform: translateY(2px);
+    color: white;    
+}
+
+#title-name{
+    display: flex;
+    text-decoration: none;
+}
+
+#crest{
+    position: absolute;
+    left: 1%;
+}
+
+
+.navbar{
+    position: relative;
+    background-color: lightgray;    
+    
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: nowrap;
+}
+
+.button{
+    width: 120px;
+    margin: 10px;
+
+    float: left;
+    text-align: center;
+    padding: 10px 10px;
+
+    transition: ease 0.3s;
+
+    font-family: Courier, monospace;
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
+}
+
+.button:hover{
+    background-color: gray;
+    border-radius: 10px;
+
+    transition: ease 0.3s;
+    box-shadow: 5px 5px 5px rgb(49, 49, 49);
+}
+
+.button:active{
+    transform: translateY(2px);
+    background-color: maroon;
+    color: white;    
+}
+
+#current{
+    color: white !important;
+    background-color: maroon;
+    border-radius: 10px;
+}
+
+#current:hover{
+    background-color: rgb(158, 88, 88);
+    color: black !important;
+    border-radius: 10px;
+}
