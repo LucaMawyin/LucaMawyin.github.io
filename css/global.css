@@ -46,8 +46,7 @@ body{
     object-fit: contain;
 }
 
-
-#projects-content{
+.coming-soon{
     padding: 20px;
     padding-left: 70px;
     font-size: xx-large;    
