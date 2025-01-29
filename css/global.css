@@ -95,7 +95,7 @@ body a{
 #main-foot{
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
-    animation-delay: 3s;
+    animation-delay: 2s;
     height:clamp(3vh, 5vw, 5vh);
 
     position: relative;
