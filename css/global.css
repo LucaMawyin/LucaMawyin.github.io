@@ -8,6 +8,7 @@
     --underline:black;
     --shadow-color: 0;
     --opposite-color: 255;
+    width: 100%;
 }
 
 html,body{
