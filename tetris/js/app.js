@@ -376,7 +376,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function willCollide(newBlock) {
         // Check if any of the new rotated block's positions are already taken
-        return newBlock.some(index => squares[currentPosition + index]?.classList.contains('taken'));
+        if (newBlock.some(index => squares[currentPosition + index]?.classList.contains('taken')))
+        {
+            return true;
+        }
+
+        // Wrapping from right side to left
+        if (
+            newBlock.some(index => (currentPosition + index) % width === 0) &&
+            current.some(index => (currentPosition + index) % width === width - 1)
+        ) {
+            return true;
+        }
+
+        // Wrapping from left side to right
+        if (
+            newBlock.some(index => (currentPosition + index) % width === width - 1) &&
+            current.some(index => (currentPosition + index) % width === 0)
+        ) {
+            return true;
+        }
+
+        return false;
     }
 
 
@@ -479,13 +500,15 @@ document.addEventListener('DOMContentLoaded', () => {
             unSoftDrop();
         }
 
+        const mobileView = window.matchMedia("(max-width: 768px)").matches;
+
         // If game is paused then unpause
         if (paused)
         {
             game.style.display = "flex";
             document.querySelector('#info h1').style.display = "none";
             document.querySelector('.container').style.height = "fit-content";
-            document.querySelector('.mobile-buttons').style.display = "flex";
+            document.querySelector('.mobile-buttons').style.display = mobileView ? "flex" : "none";
             timerId = setInterval(down, dropSpeed);
             paused = false;
         }
