@@ -1,4 +1,11 @@
 
+const githubDarkPath = "images/github-dark.svg";
+const githubLightPath = "images/github-light.svg";
+const mailDarkPath = "images/mail-dark.svg";
+const mailLightPath = "images/mail-light.svg";
+const linkedinDarkPath = "images/linkedin-dark.svg";
+const linkedinLightPath = "images/linkedin-light.svg";
+
 // Animation delay for splash page nav links
 document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll("#main-nav a");
@@ -27,15 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.remove("light-mode");
 
         if (githubImg) {
-            githubImg.src = "images/github-light.png";
+            githubImg.src = githubLightPath;
         }
 
         if (mailImg) {
-            mailImg.src = "images/mail-light.webp";
+            mailImg.src = mailLightPath;
         }
 
         if (linkedinImg) {
-            linkedinImg.src = "images/linkedin-light.webp";
+            linkedinImg.src = linkedinLightPath;
         }
 
         // Match switch to respective theme
@@ -49,16 +56,16 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.remove("dark-mode");
 
         if (githubImg) {
-            githubImg.src = "images/github-dark.png";
+            githubImg.src = githubDarkPath;
 
         }
 
         if (mailImg) {
-            mailImg.src = "images/mail-dark.png";
+            mailImg.src = mailDarkPath;
         }
 
         if (linkedinImg) {
-            linkedinImg.src = "images/linkedin-dark.png";
+            linkedinImg.src = linkedinDarkPath;
         }
 
         // Match switch to respective theme
@@ -80,9 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.classList.add("dark-mode");
                 document.body.classList.remove("light-mode");
 
-                githubImg.src = "images/github-light.png";
-                mailImg.src = "images/mail-light.webp";
-                linkedinImg.src = "images/linkedin-light.webp";
+                githubImg.src = githubLightPath;
+                mailImg.src = mailLightPath;
+                linkedinImg.src = linkedinLightPath;
 
                 localStorage.setItem('theme', 'dark');
 
@@ -90,9 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.classList.remove("dark-mode");
                 document.body.classList.add("light-mode");
 
-                githubImg.src = "images/github-dark.png";
-                mailImg.src = "images/mail-dark.png";
-                linkedinImg.src = "images/linkedin-dark.png";
+                githubImg.src = githubDarkPath;
+                mailImg.src = mailDarkPath;
+                linkedinImg.src = linkedinDarkPath;
 
                 localStorage.setItem('theme', 'light');
             }
