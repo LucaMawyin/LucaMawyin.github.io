@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Changing themes
 const githubImg = document.getElementById("github-img");
+const mailImg = document.getElementById("mail-img");
+const linkedinImg = document.getElementById("linkedin-img");
 const toggleSwitch = document.getElementById("check");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -28,6 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
             githubImg.src = "images/github-light.png";
         }
 
+        if (mailImg) {
+            mailImg.src = "images/mail-light.webp";
+        }
+
+        if (linkedinImg) {
+            linkedinImg.src = "images/linkedin-light.webp";
+        }
+
         // Match switch to respective theme
         if (toggleSwitch) {
             toggleSwitch.checked = true;
@@ -40,6 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (githubImg) {
             githubImg.src = "images/github-dark.png";
+
+        }
+
+        if (mailImg) {
+            mailImg.src = "images/mail-dark.png";
+        }
+
+        if (linkedinImg) {
+            linkedinImg.src = "images/linkedin-dark.png";
         }
 
         // Match switch to respective theme
@@ -48,9 +67,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Check theme toggle and apply themes
     function checkToggle() {
 
         githubImg.style.opacity = 0;
+        mailImg.style.opacity = 0;
+        linkedinImg.style.opacity = 0;
 
         setTimeout(() => {
             if (toggleSwitch.checked) {
@@ -59,6 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.classList.remove("light-mode");
 
                 githubImg.src = "images/github-light.png";
+                mailImg.src = "images/mail-light.webp";
+                linkedinImg.src = "images/linkedin-light.webp";
 
                 localStorage.setItem('theme', 'dark');
 
@@ -67,6 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.classList.add("light-mode");
 
                 githubImg.src = "images/github-dark.png";
+                mailImg.src = "images/mail-dark.png";
+                linkedinImg.src = "images/linkedin-dark.png";
 
                 localStorage.setItem('theme', 'light');
             }
@@ -74,6 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         githubImg.style.opacity = 1;
+        mailImg.style.opacity = 1;
+        linkedinImg.style.opacity = 1;
     }
 
     if (toggleSwitch) {
